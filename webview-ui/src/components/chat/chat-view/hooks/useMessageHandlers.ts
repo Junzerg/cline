@@ -40,6 +40,7 @@ export function useMessageHandlers(messages: ClineMessage[], chatState: ChatStat
 			})
 
 			let messageToSend = text.trim()
+			let messageSent = false
 			const hasContent = messageToSend || images.length > 0 || files.length > 0
 
 			// Prepend the active quote if it exists
